@@ -22,7 +22,7 @@ export class FormComponent implements OnInit {
       'fullName': new FormControl('', Validators.required),
       'company': new FormControl('', Validators.required),
       'email': new FormControl('', [Validators.required, , Validators.pattern(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)]),
-      'phoneNumber': new FormControl('', Validators.required),
+      'phoneNumber': new FormControl('', [Validators.required, Validators.pattern(/^[1-9]+[0-9]*$/)]),
       'category': new FormControl('', Validators.required),
       'message': new FormControl('', Validators.required)
     });

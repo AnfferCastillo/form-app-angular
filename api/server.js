@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({
 
 app.use(bodyParser.json());
 
-app.post('/contact', async (req, res, next) => {
+app.post('/api/contact', async (req, res, next) => {
     //Guardamos el comentario
     try {
         const result = await contactService.persistContactMessage(req.body);

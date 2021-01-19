@@ -12,6 +12,7 @@ export class ContactService {
 
   public sendComment(comment: Comment) {
     console.log('sending comment', comment);
-    this.http.post<Comment>(`${environment.API_URL}/contact`, comment);
+    this.http.post<Comment>(`${environment.API_URL}/contact`, comment)
+    .subscribe(res => console.log(res));
   }
 }
